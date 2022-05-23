@@ -100,7 +100,8 @@ for n in range(2,1001):
     if count == n-2:
          result += 1
 print(result)
-'''
+
+
 def strip(txt):
     return txt.strip("\n")
 def replace(txt):
@@ -139,3 +140,5 @@ for k in range(len(numbers)-1):
         count = 1       
 if dup == 0:
     print("No dupliates")
+'''
+
