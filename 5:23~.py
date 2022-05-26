@@ -1,5 +1,6 @@
-'''
+
 #5/23
+
 _list  = {10:"A", 11:"B", 12:"C", 13:"D", 14:"E", 15:"F"}
 def change():
     k, n = set(input("변환할 정수와 원하는 진법을 적어주세요. \n ex. 233, 2 \n :").split(","))
@@ -43,5 +44,17 @@ result = ""
 for word in sign:
     result += rule[word]
 print(result)
-'''
 
+
+#5/26
+
+word = input("변환할 cameeCase를 입력해주세요: ")
+for letter in word:
+    if letter.isupper(): word = word.replace(letter,"_"+letter.lower())
+    elif letter.isdigit(): word = word.replace(letter,"_"+letter)
+print(word)
+
+
+_input = input("변환할 cameeCase를 입력해주세요: ")
+a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+print("".join("_"+l.lower() if l in a else l for l in _input))
