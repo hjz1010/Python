@@ -48,13 +48,13 @@ print(result)
 
 #5/26
 
-word = input("변환할 cameeCase를 입력해주세요: ")
+word = input("변환할 camelCase를 입력해주세요: ")
 for letter in word:
     if letter.isupper(): word = word.replace(letter,"_"+letter.lower())
     elif letter.isdigit(): word = word.replace(letter,"_"+letter)
 print(word)
 
 
-_input = input("변환할 cameeCase를 입력해주세요: ")
+_input = input("변환할 camelCase를 입력해주세요: ")
 a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 print("".join("_"+l.lower() if l in a else l for l in _input))
