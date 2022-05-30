@@ -1,5 +1,5 @@
 #5/27
-
+'''
 _input = input().split(" ")
 n = int(_input[0])
 _list = _input[1:]
@@ -33,3 +33,53 @@ with open('timelog.txt','r') as timelog:
            if time1 < input_time and input_time < time2:
                result += 1
 print("%s명이 사무실에 있습니다." %result)
+'''
+
+#5/29
+
+def Mabu():
+    result = ''
+    while 1:
+        input_num = int(input())
+        if input_num == 0: break
+        else:
+            count = 0
+            status = False
+            for i in range(1,input_num +1):
+                if input_num % i == 0 : status = not status
+            result += (lambda x: 'yes' if x else 'no')(status)  + '\n'   
+    return result
+
+
+def min_num(num):
+    target = 0
+    for i in range(100):
+        target += 10**i
+        if target % num == 0:
+            return i+1
+    return '알맞은 숫자를 입력하세요.'
+
+def min_num2(num, i=0, target=0):
+    while 1:
+        target += 10**i
+        if target % num == 0:
+            return i+1
+        i += 1
+
+def min_num3(num):
+    target = '1'
+    while 1:
+        if int(target) % num == 0 : return len(target)
+        else : target += '1'
+
+
+#5/30
+
+with open('triangel.txt','r') as textfile:
+    for line in textfile:
+        legs = line.strip('\n').split(" ")
+        a, b, c = map(float, legs)
+        r = "헤론의 공식으로 구한다.."
+        print('The radius of the round table is: ' + round(r, 3))
+    
+#if __name__ == "__main__":    
