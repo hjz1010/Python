@@ -33,7 +33,7 @@ with open('timelog.txt','r') as timelog:
            if time1 < input_time and input_time < time2:
                result += 1
 print("%s명이 사무실에 있습니다." %result)
-'''
+
 
 #5/29
 
@@ -81,5 +81,32 @@ with open('triangel.txt','r') as textfile:
         a, b, c = map(float, legs)
         r = "헤론의 공식으로 구한다.."
         print('The radius of the round table is: ' + round(r, 3))
+'''
+
+#5/31
+
+def sort_program(_list):
+    for i in range(1,len(_list)):
+        black = _list[i]
+        for j in range(i,0,-1):
+            gray = _list[j-1]
+            if gray > black : (_list[j-1], _list[j]) = (_list[j], _list[j-1])
+            else : break
+    print(_list)
+
+def sort_program2(_list):
+    for i in range(1,len(_list)):
+        black = _list[i]
+        for j in range(i,0,-1):
+            gray = _list[j-1]
+            if gray > black : new_position = j-1
+            else:
+                new_position = j
+                break
+        _list[new_position+1:i+1] = _list[new_position:i]
+        _list[new_position] = black
+    print(_list)
     
-#if __name__ == "__main__":    
+
+if __name__ == "__main__":    
+    sort_program2([5,2,4,6,1,3])
