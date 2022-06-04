@@ -69,7 +69,7 @@ def upperCase():
     name = input("참가자: ")
     print(name.upper())
 
-#35???
+#35 ???
 
 #36
 def mulTable():
@@ -79,5 +79,26 @@ def mulTable():
         result += str(i * n) + " "
     print(result)
 
+#6/4
+#37
+def election():
+    _list = input().split()
+    candidates = list(set(_list))
+    countList = []
+    for cnd in candidates:
+        countList.append(_list.count(cnd))
+    _index = countList.index(max(countList))        
+    print("%s(이)가 총 %s표로 반장이 되었습니다." %(candidates[_index], max(countList)))
+
+#38
+def ranking():
+    _input = input().split()
+    scores = list(set(_input))
+    rank1 = scores[-1]
+    rank2 = scores[-2]
+    rank3 = scores[-3]
+    candy = _input.count(rank1) + _input.count(rank2) + _input.count(rank3)
+    print(candy)
+
 if __name__ == "__main__":
-    mulTable()
+    ranking()
